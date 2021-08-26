@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - prints text using printf()
  *
  * Return: Always 0 (Success)
  */
