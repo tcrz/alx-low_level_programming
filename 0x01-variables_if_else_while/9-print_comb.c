@@ -2,7 +2,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - prints possible combinations of 
+ * main - prints possible combinations of
  * single-digit numbers
  *
  *
