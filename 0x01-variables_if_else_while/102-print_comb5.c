@@ -22,7 +22,7 @@ int main(void)
 
 				for (d = '0'; d <= '9'; d++)
 				{
-					if (a <= c && b < d)
+					if (a <= c && b <= d)
 					{
 					putchar(a);
 					putchar(b);
