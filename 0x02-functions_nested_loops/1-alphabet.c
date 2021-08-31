@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 void print_alphabet(void)
 {
 	 char x;
@@ -6,5 +7,4 @@ void print_alphabet(void)
                 _putchar(x);
         }
         _putchar('\n');
-
 }
