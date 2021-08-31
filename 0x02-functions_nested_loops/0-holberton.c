@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - prints 'Holberton' followed by a new line
  *
@@ -13,10 +13,10 @@ int main(void)
 
 	for (a = 0; a <= 9; a++)
 	{
-		putchar(school[a]);
+		_putchar(school[a]);
 	}
 
-	putchar ('\n');
+	_putchar ('\n');
 	return (0);
 }
 
