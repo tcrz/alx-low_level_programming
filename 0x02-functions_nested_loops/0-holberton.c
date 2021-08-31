@@ -16,7 +16,7 @@ int main(void)
 		_putchar(school[a]);
 	}
 
-	_putchar ('\n');
+
 	return (0);
 }
 
