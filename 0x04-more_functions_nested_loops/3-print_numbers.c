@@ -3,7 +3,7 @@
 /**
  * print_numbers - prints numbers 0 to 9, followed by a new line.
  *
- * Return: void
+ *
  */
 
 void print_numbers(void)
@@ -13,9 +13,9 @@ void print_numbers(void)
 	a = 0;
 	while (a <= 9)
 	{
-		putchar(a + '0');
+		_putchar(a + '0');
 		a++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
 
