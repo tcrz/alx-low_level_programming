@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - check the code for Holberton School students.
+ * _strcat - concatenates two strings.
  * @dest: Destination string
  * @src: String for adding
  * Return: Always 0.
