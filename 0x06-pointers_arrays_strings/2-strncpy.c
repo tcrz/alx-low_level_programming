@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncpy - check the code for Holberton School students.
+ * _strncpy - copies a string.
  * @dest: Destination string
  * @src: Input string
  * @n: Array index restriction
