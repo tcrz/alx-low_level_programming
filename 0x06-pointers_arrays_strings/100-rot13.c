@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13 - check the code for Holberton School students.
+ * rot13 - encodes a string using rot13.
  * @str: String to be converted
  * Return: Always 0.
  */
