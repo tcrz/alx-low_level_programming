@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strncat - check the code for Holberton School students.
+ * _strncat - concatenates two strings.
  * @dest: Destination string
  * @src: String to be added
  * @n: Array block

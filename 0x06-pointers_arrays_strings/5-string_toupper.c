@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * string_toupper - check the code for Holberton School students.
+ * string_toupper - changes all lowercase letters of a string to uppercase.
  * @str: String to be reversed
  * Return: Always 0.
  */

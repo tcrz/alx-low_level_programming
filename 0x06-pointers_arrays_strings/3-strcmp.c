@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcmp - check the code for Holberton School students.
+ * _strcmp - compares two strings.
  * @s1: First string for comparison
  * @s2: Second string for comparison
  * Return: Always 0.
