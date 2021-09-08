@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * leet - check the code for Holberton School students.
+ * leet - encodes a string into 1337.
  * @str: String to be converted
  * Return: Always 0.
  */
