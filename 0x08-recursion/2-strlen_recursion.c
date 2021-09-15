@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - concatenates two strings
+ * _strlen_recursion - returns length of string
  * @s: takes a string
+ * Return: int
  */
 
 int _strlen_recursion(char *s)
 {
-	static int i = 0;
+	static int i;
+
 	if (*s != '\0')
 	{
 		i++;
@@ -17,3 +19,4 @@ int _strlen_recursion(char *s)
 		return (i);
 
 }
+
