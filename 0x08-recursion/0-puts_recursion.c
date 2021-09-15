@@ -1,7 +1,5 @@
 #include "main.h"
 
-#include "main.h"
-
 /**
  * _puts_recursion - concatenates two strings
  * @s: takes a string
