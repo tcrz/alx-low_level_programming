@@ -4,7 +4,7 @@
 /**
  * main - program that multiplies two numbers
  * @argc: argument count
- * @argv: array of string  arguments
+ * @argv: array of string arguments
  * Return: Always 0 if successful
  */
 
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int a, b, result;
 
-	if(argc == 3)
+	if (argc == 3)
 	{
 		a = atoi(argv[1]);
 		b = atoi(argv[2]);
