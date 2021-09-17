@@ -1,15 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@tcrz 
-afinesami
-/
-holbertonschool-low_level_programming
-Public
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -56,4 +44,3 @@ int main(int argc, char *argv[])
 	printf("%d\n", coins);
 	return (0);
 }
-
