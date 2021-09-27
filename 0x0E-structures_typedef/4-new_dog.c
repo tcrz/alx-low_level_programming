@@ -2,16 +2,18 @@
 #include <stdlib.h>
 
 /**
- * new_dog -  initialize a variable of type struct dog
+ * new_dog -  creates a new dog
  *
  * @name: string value
  * @age: float value
  * @owner: string value
+ * Return: a dog of type dog_t else NULL
 */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
+
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
