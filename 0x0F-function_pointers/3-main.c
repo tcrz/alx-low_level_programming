@@ -13,16 +13,16 @@ int main(int argc, char *argv[])
 {
 	int num1, num2, result;
 	char sign;
-	int (*func) (int, int);
+	int (*func)(int, int);
 
 	if (argc == 4)
-        {
-                num1 = atoi(argv[1]);
-                num2 = atoi(argv[3]);
+	{
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[3]);
 		func = (get_op_func(argv[2]));
 		sign = *argv[2];
 		result = func(num1, num2);
-        }
+	}
 	else
 	{
 		 printf("%s\n", "Error");
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	printf("%d\n",result);
+	printf("%d\n", result);
 
 	return (0);
 }
