@@ -5,7 +5,7 @@
 /**
  * _strdup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as parameter
- * @str: number of bytes to be allocated in memory
+ * @str: string
  * Return: pointer to duplicate array if successful else NULL
  */
 
