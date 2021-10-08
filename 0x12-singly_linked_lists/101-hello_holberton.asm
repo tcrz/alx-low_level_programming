@@ -1,23 +1,21 @@
-; stack protection
-%ifidn __OUTPUT_FORMAT__,elf64
-section .note.GNU-stack noalloc noexec nowrite progbits
-%endif
+extern	printf	  		; the C function, to be called
 
-default rel
-extern	puts
-global	main
+        section .data		; Data section, initialized variables
+msg:	db "Hello, Holberton", 0	; C string needs 0
+fmt:    db "%s", 10, 0          ; The printf format, "\n",'0'
 
-section .text
-main:
-	mov  rdi, msg
-	call puts WRT ..plt
+        section .text           ; Code section.
 
-	xor  eax,eax
-	ret
+        global main		; the standard gcc entry point
+main:				; the program label for the entry point
+        push    rbp		; set up stack frame, must be aligned
 
-section .rodata
+	mov	rdi,fmt
+	mov	rsi,msg
+	mov	rax,0		; or can be  xor  rax,rax
+        call    printf		; Call C function
 
-msg:	db `Hello, Holberton`,0
+	pop	rbp		; restore stack
 
-;section .bss
-;section .data
+	mov	rax,0		; normal, no error, return value
+	ret			; return
