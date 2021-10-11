@@ -1,12 +1,12 @@
 # Singly linked lists #
 
 ## What is a linked list? ##
-_A linked list is the sequence of linked lists which are connected with each other through links.
+*A linked list is the sequence of linked lists which are connected with each other through links.
  Linked list in C is a linear data structure where the data is stored at different locations and they are linked using pointers. You have to use pointers to implement the linked list data structure.
 
 A linked list can be defined as a collection of connected nodes. It is a linear data structure. A linked list contains two parts such as:-
 * **Data Part**: Contains the data of the user
-* **Pointer Part**: It points to the next member of the linked list_
+* **Pointer Part**: It points to the next member of the linked list*
 
 
 * 0-print_list.c is a function that prints all the elements of a list_t list.
