@@ -1,12 +1,15 @@
 #  Linked Lists? ##
 
 A linked list is the sequence of linked lists which are connected with each ot>
- Linked list in C is a linear data structure where the data is stored at differ>
+ Linked list in C is a linear data structure where the data is stored at differrent locations and they are linked using pointers. You have to use pointers to implement the linked list data structure.
 
-A linked list can be defined as a collection of connected nodes. It is a linear>
+A linked list can be defined as a collection of connected nodes. It is a linear data structure. A linked list contains two parts such as:
 * **Data Part**: Contains the data of the user
 * **Pointer Part**: It points to the next member of the linked list
 
+In the above image, Head contains the address of the first node. 
+And the last node in the linked list points to NULL.
+Nodes are stored at different locations.
 
 # Singly linked lists #
 
