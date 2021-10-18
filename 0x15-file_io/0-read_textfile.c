@@ -26,14 +26,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	x = read(fd, c, letters);
 	if (x < 0)
+	{
+		free(c);
 		return (0);
+	}
 	c[x] = '\0';
 
 	y = write(STDOUT_FILENO, c, x);
 	if (y < 0)
+	{
+		free(c);
 		return (0);
+	}
 
+	free(c);
 	return (y);
-
-
 }
