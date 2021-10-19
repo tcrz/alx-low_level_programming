@@ -2,7 +2,7 @@
 
 
 /**
- * insert_nodeint_at_index -  frees a listint_t list
+ * insert_nodeint_at_index - inserts a new node at a given position
  *
  * @head: pointer to a pointer of type listint_t
  * @idx: index of the list where new node should be added.
