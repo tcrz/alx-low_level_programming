@@ -25,7 +25,7 @@ int main(int ac, char *av[])
 		exit(98);
 	}
 	fd2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((sz = read(fd1, buf, BUFSIZ) > 0))
+	while ((sz = read(fd1, buf, BUFSIZ)) > 0)
 	{
 		if (fd2 < 0 || write(fd2, buf, sz) != sz)
 		{
@@ -37,7 +37,7 @@ int main(int ac, char *av[])
 	if (sz < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(99);
+		exit(98);
 	}
 	a = close(fd1);
 	b = close(fd2);
