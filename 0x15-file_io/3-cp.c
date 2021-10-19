@@ -10,7 +10,7 @@
 
 int main(int ac, char **av)
 {
-	int fd1, fd2, sz;
+	int fd1, fd2, sz, a, b;
 	char buf[1024];
 
 	if (ac != 3)
@@ -39,8 +39,19 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", av[2]);
 		exit(99);
 	}
+	a = close(fd1);
+	b = close(fd2);
+	if (a < 0 || b < 0)
+	{
+		if (a < 0)
+                        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+		if (b < 0)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
+                exit(100);
+        }
 
-	if (close(fd1) < 0)
+
+	/*if (close(fd1) < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd1);
 		exit(100);
@@ -49,6 +60,6 @@ int main(int ac, char **av)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd2);
 		exit(100);
-	}
+	} */
 	return (0);
 }
