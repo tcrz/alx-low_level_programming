@@ -29,6 +29,7 @@ int main(int ac, char **av)
 		if (fd2 < 0 || write(fd2, buf, sz1) != sz1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", av[2]);
+			close(fd1);
 			exit(99);
 		}
 	}
@@ -39,7 +40,6 @@ int main(int ac, char **av)
 	}
 	a = close(fd1);
 	b = close(fd2);
-
 	if (a < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
