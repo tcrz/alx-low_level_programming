@@ -8,7 +8,7 @@
  * Return: Always 0 (Success)
  */
 
-int main(int ac, char *av[])
+int main(int ac, char **av)
 {
 	int fd1, fd2, sz, a, b;
 	char buf[1024];
