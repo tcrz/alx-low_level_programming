@@ -42,12 +42,12 @@ int main(int ac, char **av)
 
 	if (close(fd1) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", close(fd1));
+		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd1);
 		exit(100);
 	}
 	if (close(fd2) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", close(fd2));
+		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd2);
 		exit(100);
 	}
 	return (0);
