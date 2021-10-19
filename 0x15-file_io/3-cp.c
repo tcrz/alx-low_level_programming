@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage:cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fd_r = open(argv[1], O_RDONLY);
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	{
 		if (fd_w < 0 || write(fd_w, buf, r) != r)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(fd_r);
 			exit(99);
 		}
