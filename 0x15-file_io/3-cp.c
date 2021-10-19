@@ -34,19 +34,20 @@ int main(int ac, char **av)
 			exit(99);
 		}
 	}
-	if (fd2 < 0)
+	if (sz < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", av[2]);
-		exit(98);
+		exit(99);
 	}
-	a = close(fd1);
-	b = close(fd2);
-	if (a < 0 || b < 0)
+
+	if (close(fd1) < 0)
 	{
-		if (a < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
-		if (b < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", close(fd1));
+		exit(100);
+	}
+	if (close(fd2) < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", close(fd2));
 		exit(100);
 	}
 	return (0);
