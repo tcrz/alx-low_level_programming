@@ -9,8 +9,8 @@
 
 int main(int ac, char **av)
 {
-	int fd1, fd2, sz1;
-	char buf[8000];
+	int fd1, fd2, sz1, a, b;
+	char buf[2000];
 
 	if (ac != 3)
 	{
@@ -24,7 +24,7 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	fd2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((sz1 = read(fd1, buf, 8000)) > 0)
+	while ((sz1 = read(fd1, buf, 2000)) > 0)
 	{
 		if (fd2 < 0 || write(fd2, buf, sz1) != sz1)
 		{
@@ -37,12 +37,15 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s", av[2]);
 		exit(98);
 	}
-	if (close(fd1) < 0)
+	a = close(fd1);
+	b = close(fd2);
+
+	if (a < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
-	if (close(fd2) < 0)
+	if (b < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
