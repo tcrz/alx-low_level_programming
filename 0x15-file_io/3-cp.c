@@ -30,6 +30,7 @@ int main(int ac, char **av)
 		if (fd2 < 0 || write(fd2, buf, sz) != sz)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write from file %s", av[2]);
+			close(fd1);
 			exit(99);
 		}
 	}
