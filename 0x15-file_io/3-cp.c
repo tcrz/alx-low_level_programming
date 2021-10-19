@@ -10,8 +10,8 @@
 
 int main(int ac, char **av)
 {
-	int fd1, fd2, sz, x, y;
-	char buf[1025];
+	int fd1, fd2, sz;
+	char buf[1024];
 
 	if (ac != 3)
 	{
