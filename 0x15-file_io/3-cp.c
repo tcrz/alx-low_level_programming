@@ -11,7 +11,7 @@
 int main(int ac, char **av)
 {
 	int fd1, fd2, sz;
-	char buf[1024];
+	char buf[1025];
 
 	if (ac != 3)
 	{
@@ -30,7 +30,6 @@ int main(int ac, char **av)
 		if (fd2 < 0 || write(fd2, buf, sz) != sz)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-			close(fd1);
 			exit(99);
 		}
 	}
