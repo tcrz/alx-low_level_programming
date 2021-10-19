@@ -9,7 +9,7 @@
 
 int main(int ac, char **av)
 {
-	int fd1, fd2, sz1, sz2;
+	int fd1, fd2, sz1;
 	char buf[2000];
 
 	if (ac != 3)
