@@ -10,7 +10,7 @@
 
 int main(int ac, char **av)
 {
-	int fd1, fd2, sz;
+	int fd1, fd2, sz, x, y;
 	char buf[1025];
 
 	if (ac != 3)
@@ -38,13 +38,13 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", av[1]);
 		exit(98);
 	}
-	a = close(fd1);
-	b = close(fd2);
-	if (a < 0 || b < 0)
+	x = close(fd1);
+	y = close(fd2);
+	if (x < 0 || y < 0)
 	{
-		if (a < 0)
+		if (x < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
-		if (b < 0)
+		if (y < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
