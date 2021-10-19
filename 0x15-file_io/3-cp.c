@@ -39,18 +39,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	x = close(fd1);
-	y = close(fd2);
-	if (x < 0 || y < 0)
-	{
-		if (x < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
-		if (y < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-		exit(100);
-	}
 
-	/*
 	if (close(fd1) < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
@@ -60,6 +49,6 @@ int main(int ac, char **av)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
-	} */
+	}
 	return (0);
 }
