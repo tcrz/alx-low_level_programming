@@ -11,7 +11,7 @@
 int main(int ac, char **av)
 {
 	int fd1, fd2, sz, a, b;
-	char buf[1024];
+	char buf[BUFSIZ];
 
 	if (ac != 3)
 	{
@@ -25,7 +25,7 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	fd2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((sz = read(fd1, buf, 1024)) > 0)
+	while ((sz = read(fd1, buf, BUFSIZ) > 0)
 	{
 		if (fd2 < 0 || write(fd2, buf, sz) != sz)
 		{
@@ -36,7 +36,7 @@ int main(int ac, char **av)
 	}
 	if (sz < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(99);
 	}
 	a = close(fd1);
@@ -44,22 +44,10 @@ int main(int ac, char **av)
 	if (a < 0 || b < 0)
 	{
 		if (a < 0)
-                        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		if (b < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-                exit(100);
-        }
-
-
-	/*if (close(fd1) < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd1);
 		exit(100);
 	}
-	if (close(fd2) < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd2);
-		exit(100);
-	} */
 	return (0);
 }
