@@ -15,12 +15,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht)
 		return (0);
-	/*
-	*if (key == NULL || strlen(key) == 0)
-	*	return (0);
-	*if (value == NULL || strlen(value) == 0)
-	*	return (0);
-	*/
+	if (strlen(key) == 0)
+		return (0);
 	idx = key_index((const unsigned char *)key, ht->size);
 	entry = ht->array[idx];
 
