@@ -16,7 +16,7 @@ oclean:
 	${RM} -f ${OBJ}
 
 fclean:
-	${RM} *.o ${NAME}
-	${RM} *.o ${OBJ}
+	${RM} -f *.o ${NAME}
+	${RM} -f *.o ${OBJ}
 
 re: oclean all
