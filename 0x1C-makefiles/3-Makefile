@@ -13,7 +13,6 @@ clean:
 	${RM} -f *~ ${NAME}
 
 oclean:
-	${RM} -f *~ ${NAME}
 	${RM} -f ${OBJ}
 
 fclean:
