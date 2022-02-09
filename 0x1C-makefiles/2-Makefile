@@ -1,12 +1,12 @@
-CC = gcc                        # compiler to use
+CC = gcc                     
+SRC = school.c main.c
+OBJ = $(SRCS:%.c=%.o)
+NAME = school
 
-SRCS := school.c main.c
-BINS := $(SRCS:%.c=%.o)
+all: NAME
 
-all: school
-
-school: ${BINS}
-	gcc ${BINS} -o school
+NAME: ${OBJ}
+	gcc ${OBJ} -o school
 
 %.o: %.c
 	@${CC} -c $<
