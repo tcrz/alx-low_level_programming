@@ -1,0 +1,14 @@
+CC = gcc                        # compiler to use
+
+SRCS := school.c main.c
+BINS := $(SRCS:%.c=%.o)
+
+all: school
+
+school: ${BINS}
+	gcc ${BINS} -o school
+
+%.o: %.c
+	@${CC} -c $<
+	${CC} -c -o $@ $<
+
