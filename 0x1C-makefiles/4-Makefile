@@ -18,5 +18,6 @@ oclean:
 
 fclean:
 	${RM} *.o ${NAME}
+	${RM} *.o ${OBJ}
 
 re: oclean all
